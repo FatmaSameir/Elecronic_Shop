@@ -42,11 +42,23 @@ addFieldaggregation = async (req, res) => {
     const aggregation = await Aggregation.aggregate( [ {  $addFields: { totalHour: { $sum: "$hours"  }  }   } ])
     res.status(200).json({  aggregation });
 };
+projectaggregation = async (req, res) => {
+    const aggregation = await Aggregation.aggregate(  [ { $project: { field: 1 }}, { $limit: 3}] )
+    res.status(200).json({  aggregation });
+};
+lookupaggregation = async (req, res) => {
+    const aggregation = await Aggregation.aggregate(  [ { $lookup :({ from: 'users', localField: 'userId', foreignField: '_id', as: 'users' })}])
+    res.status(200).json({  aggregation });
+};
+
+
 module.exports = {
     addaggregation: addaggregation,
     matchaggregation:  matchaggregation,
     unwindaggregation: unwindaggregation,
     groupaggregation: groupaggregation,
-    addFieldaggregation :addFieldaggregation
+    addFieldaggregation :addFieldaggregation,
+    projectaggregation : projectaggregation,
+    lookupaggregation : lookupaggregation
 
 }
