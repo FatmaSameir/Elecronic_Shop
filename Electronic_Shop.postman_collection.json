@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "796c17ce-9a1b-4cd9-a56e-f8602f583b11",
+		"name": "Electronic_Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21084996"
+	},
+	"item": [
+		{
+			"name": "addcustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customername\": \"mena\",\r\n    \"address\": \"tanta\",\r\n    \"phone\": \"010788554122\",\r\n    \"country\": \"egypt\",\r\n    \"product\":[\"6287f5ad91b3a45354a452f3\",\"6287f64391b3a45354a452f5\"],\r\n    \"order\":[\"6287feb611a82ce21a5402fa\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customer/addcustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"addcustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getonecustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customer/628cfb57d502e00145dc7ca6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"628cfb57d502e00145dc7ca6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customername\": \"eman\",\r\n    \"address\": \"alex\",\r\n    \"phone\": \"0155544555\",\r\n    \"country\": \"egypt\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/customer/628cfb57d502e00145dc7ca6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"628cfb57d502e00145dc7ca6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/customer/628cfb57d502e00145dc7ca6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"628cfb57d502e00145dc7ca6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addproduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productname\": \"Tv,laptop\",\r\n    \"productnumper\": \"1455\",\r\n    \"customer\":[\"6287f6ce91b3a45354a452fa\",\"628bfdf5e4a744dfe6ee7db5\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/product/addproduct",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getallproduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addorder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ordername\":\"tv\",\r\n    \"ordernumper\":\"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/order/addorder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"addorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getorders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/order",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addcard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cardtype\":\"bankmaser\",\r\n    \"customer\":\"628bfdf5e4a744dfe6ee7db5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/card/addcard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card",
+						"addcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gatallcard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/card",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addallaggregation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"aggrtype\":\"abc\",\r\n    \"hours\":[3,4,7]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/aggregation/addaggregation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"addaggregation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "match",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/match",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unwind",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/unwind",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"unwind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/group",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"group"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addfield",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/addfield",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"addfield"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/project",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lookup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/aggregation/lookup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"aggregation",
+						"lookup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
